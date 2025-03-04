@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 const SignInScreen = () => {
   return (
     <View>
-      <Text>SignInScreen</Text>
+      <Text style={{ color: "green" }}>SignInScreen</Text>
     </View>
   );
 };
