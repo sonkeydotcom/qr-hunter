@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import {
   StyleProp,
   StyleSheet,
+  Text,
   TextInput,
   TouchableOpacity,
   View,
@@ -16,11 +17,11 @@ interface CustomInputProps extends TextInput {
   secureTextEntry?: boolean;
   value: string;
   placeholder?: string;
-  onChangeText: () => void;
+  onChangeText: (text: string) => void;
 }
 
 const CustomInput: React.FC<CustomInputProps> = ({
-  title,
+  title = "password",
   placeholder,
   onChangeText,
   containerStyle,
@@ -31,33 +32,41 @@ const CustomInput: React.FC<CustomInputProps> = ({
   const [secureTextEntry, setSecureTextEntry] = useState(title === "password");
   return (
     <View
-      style={[
-        styles.container,
-        { borderColor: isFocused ? "blue" : "#cccccc" },
-        containerStyle,
-      ]}
+      style={{
+        paddingHorizontal: 10,
+      }}
     >
-      <TextInput
-        placeholder={placeholder}
-        value={value}
-        onChangeText={onChangeText}
-        placeholderTextColor={"#f5f5f5"}
-        style={styles.input}
-        secureTextEntry={secureTextEntry}
-        {...props}
-      />
-      {title === "password" && (
-        <TouchableOpacity
-          onPress={() => setSecureTextEntry(!secureTextEntry)}
-          style={styles.eyeIcon}
-        >
-          <Ionicons
-            name={secureTextEntry ? "eye" : "eye-off"}
-            size={20}
-            color="black"
-          />
-        </TouchableOpacity>
-      )}
+      <Text style={styles.title}>{title}</Text>
+
+      <View
+        style={[
+          styles.container,
+          { borderColor: isFocused ? "blue" : "#23323f" },
+          containerStyle,
+        ]}
+      >
+        <TextInput
+          placeholder={placeholder}
+          value={value}
+          onChangeText={onChangeText}
+          placeholderTextColor={"#f5f5f5"}
+          style={styles.input}
+          secureTextEntry={title === "password" && secureTextEntry}
+          {...props}
+        />
+        {title === "password" && (
+          <TouchableOpacity
+            onPress={() => setSecureTextEntry(!secureTextEntry)}
+            style={styles.eyeIcon}
+          >
+            <Ionicons
+              name={secureTextEntry ? "eye" : "eye-off"}
+              size={20}
+              color="white"
+            />
+          </TouchableOpacity>
+        )}
+      </View>
     </View>
   );
 };
@@ -65,7 +74,32 @@ const CustomInput: React.FC<CustomInputProps> = ({
 export default CustomInput;
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    borderWidth: 2,
+    margin: 8,
+    borderRadius: 8,
+    height: 50,
+    flexDirection: "row",
+    borderColor: "red",
+    backgroundColor: "#364F63",
+    width: "100%",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingEnd: 10,
+  },
+  title: {
+    marginHorizontal: 10,
+    textTransform: "capitalize",
+    color: "#cccccc",
+    fontSize: 16,
+    fontWeight: "500",
+  },
   eyeIcon: {},
-  input: {},
+  input: {
+    padding: 10,
+    fontSize: 14,
+    textAlign: "left",
+    flex: 1,
+    color: "#3b3b3b",
+  },
 });
