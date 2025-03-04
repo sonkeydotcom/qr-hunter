@@ -14,7 +14,7 @@ const Background = ({ children, style }: BackgroundProps) => {
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "orange",
+        backgroundColor: "",
       }}
     >
       <LinearGradient
