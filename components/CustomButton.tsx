@@ -27,7 +27,7 @@ const CustomButton = ({
   return (
     <View style={[styles.container, containerStyle]}>
       <TouchableOpacity
-        style={styles.button}
+        style={[styles.button, buttonStyle]}
         activeOpacity={disabled ? 1 : 0.5}
         disabled={disabled || loading}
         onPress={onPress}
@@ -51,8 +51,10 @@ const styles = StyleSheet.create({
     padding: 15,
     paddingVertical: 18,
     alignItems: "center",
-    borderRadius: 6,
+    borderRadius: 12,
     width: "100%",
+    borderWidth: 1,
+    borderColor: "#5EE4EF",
     // flexDirection: "row",
     // justifyContent: "center",
   },

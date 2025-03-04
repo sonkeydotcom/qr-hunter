@@ -33,7 +33,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
   return (
     <View
       style={{
-        paddingHorizontal: 10,
+        paddingHorizontal: 5,
       }}
     >
       <Text style={styles.title}>{title}</Text>

@@ -14,7 +14,7 @@ const Background = ({ children, style }: BackgroundProps) => {
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#425F77",
+        // backgroundColor: "#425F77",
       }}
     >
       <LinearGradient
@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
     top: 0,
     bottom: 0,
     // height: "100%",
+    backgroundColor: "#425F77",
   },
 });
 export default Background;
