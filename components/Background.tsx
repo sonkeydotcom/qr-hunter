@@ -1,25 +1,26 @@
+import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, ViewStyle } from "react-native";
 
 type BackgroundProps = {
   children: React.ReactNode;
+  style?: ViewStyle;
 };
 
-const Background = ({ children }: BackgroundProps) => {
+const Background = ({ children, style }: BackgroundProps) => {
   return (
-    <View style={styles.container}>
-      <View style={styles.content}>{children}</View>
-    </View>
+    <LinearGradient
+      colors={["#F5F5F5", "#E0E0E0"]} // Customize your gradient colors
+      style={[styles.container, style]}
+    >
+      {children}
+    </LinearGradient>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "red", // Full-screen red background
-  },
-  content: {
-    flex: 1, // Ensures children (Stack) also take full height
   },
 });
 
