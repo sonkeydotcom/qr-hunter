@@ -6,15 +6,21 @@ type BackgroundProps = {
 };
 
 const Background = ({ children }: BackgroundProps) => {
-  return <View style={styles.container}>{children}</View>;
+  return (
+    <View style={styles.container}>
+      <View style={styles.content}>{children}</View>
+    </View>
+  );
 };
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    position: "relative",
-    backgroundColor: "red",
-    paddingVertical: 24,
-    justifyContent: "center",
+    backgroundColor: "red", // Full-screen red background
+  },
+  content: {
+    flex: 1, // Ensures children (Stack) also take full height
   },
 });
+
 export default Background;
