@@ -5,7 +5,7 @@ import { StyleSheet } from "react-native";
 const AuthLayout = () => {
   return (
     <Stack>
-      <Stack.Screen name="sign-in" />
+      <Stack.Screen name="index" />
     </Stack>
   );
 };
