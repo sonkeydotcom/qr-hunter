@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "HelloWorld",
-    "slug": "expo-template-default",
+    "name": "QR Hunter",
+    "slug": "qr-hunter",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -9,13 +9,15 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sonkey.qrhunter"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.sonkey.qrhunter"
     },
     "web": {
       "bundler": "metro",
@@ -36,6 +38,18 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "15eb629d-36e5-44f9-bf44-52195d8d092a"
+      }
+    },
+    "owner": "sonkey",
+    "updates": {
+      "url": "https://u.expo.dev/15eb629d-36e5-44f9-bf44-52195d8d092a"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
