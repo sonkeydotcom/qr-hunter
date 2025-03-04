@@ -1,5 +1,5 @@
 import { useFonts } from "expo-font";
-import { Slot } from "expo-router";
+import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
@@ -29,7 +29,11 @@ export default function RootLayout() {
 
   return (
     <Background>
-      <Slot />
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="(auth)" />
+        {/* <Stack.Screen name="(tabs)" /> */}
+        <Stack.Screen name="+not-found" />
+      </Stack>
       <StatusBar style="dark" />
     </Background>
   );
