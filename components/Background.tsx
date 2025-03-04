@@ -11,7 +11,7 @@ const Background = ({ children, style }: BackgroundProps) => {
   return (
     <LinearGradient
       colors={["#F5F5F5", "#E0E0E0"]} // Customize your gradient colors
-      style={[styles.container, style]}
+      style={styles.container}
     >
       {children}
     </LinearGradient>

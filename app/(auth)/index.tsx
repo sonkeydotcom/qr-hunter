@@ -1,13 +1,11 @@
 import Background from "@/components/Background";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text } from "react-native";
 
 const SignInScreen = () => {
   return (
     <Background>
-      <View>
-        <Text style={{ color: "green" }}>SignInScreen</Text>
-      </View>
+      <Text style={{ color: "green" }}>SignInScreen</Text>
     </Background>
   );
 };
