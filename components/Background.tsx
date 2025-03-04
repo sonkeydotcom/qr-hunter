@@ -6,9 +6,14 @@ type BackgroundProps = {
 };
 
 const Background = ({ children }: BackgroundProps) => {
-  return <View>{children}</View>;
+  return <View style={styles.container}>{children}</View>;
 };
 
 export default Background;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "red",
+  },
+});

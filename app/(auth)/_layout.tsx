@@ -4,7 +4,11 @@ import { StyleSheet } from "react-native";
 
 const AuthLayout = () => {
   return (
-    <Stack>
+    <Stack
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <Stack.Screen name="index" />
     </Stack>
   );

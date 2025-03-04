@@ -5,7 +5,6 @@ import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
 import "react-native-reanimated";
 
-import Background from "@/components/Background";
 import { useColorScheme } from "@/hooks/useColorScheme";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -28,14 +27,14 @@ export default function RootLayout() {
   }
 
   return (
-    <Background>
+    <>
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="(auth)" />
         {/* <Stack.Screen name="(tabs)" /> */}
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="dark" />
-    </Background>
+    </>
   );
 }
 
