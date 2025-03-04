@@ -14,11 +14,11 @@ const Background = ({ children, style }: BackgroundProps) => {
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "",
+        backgroundColor: "#425F77",
       }}
     >
       <LinearGradient
-        colors={["#F882CA14", "#57E3EE05"]}
+        colors={["#F882CA00", "#57E3EE00"]}
         style={styles.container}
       >
         {children}
