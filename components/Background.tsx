@@ -18,7 +18,7 @@ const Background = ({ children, style }: BackgroundProps) => {
       }}
     >
       <LinearGradient
-        colors={["#F5F5F5", "#E0E0E0"]} // Customize your gradient colors
+        colors={["rgba(0,0,0,0.8)", "transparent"]}
         style={styles.container}
       >
         {children}
