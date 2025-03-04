@@ -11,6 +11,7 @@ const Background = ({ children }: BackgroundProps) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    position: "relative",
     backgroundColor: "red",
     paddingVertical: 24,
     justifyContent: "center",
